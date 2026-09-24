@@ -13,7 +13,8 @@ flash.setup({
 
 -- Keymaps
 -- stylua: ignore start
-vim.keymap.set({"n","x","o"}, "s", function() flash.jump() end, { desc = "Flash" })
+vim.keymap.set({"n","x","o"}, "<leader>j", function() flash.jump() end, { desc = "Flash Jump" })
+vim.keymap.set({"n","x","o"}, "<leader>J", function() flash.treesitter() end, { desc = "Flash Treesitter" })
 vim.keymap.set({"n","x","o"}, "S", function() flash.treesitter() end, { desc = "Flash Treesitter" })
 vim.keymap.set("o", "r", function() flash.remote() end, { desc = "Remote Flash" })
 vim.keymap.set({"x","o"}, "R", function() flash.treesitter_search() end, { desc = "Treesitter Search" })

@@ -27,8 +27,6 @@ map("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Mov
 map("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
 map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
-map("n", "<C-a>", "ggVG", { noremap = true, silent = true, desc = "Select all" })
-
 -- Better up/down
 
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
@@ -45,3 +43,5 @@ map("v", "p", '"_dP', opts)
 -- Copy whole file to clipboard
 map("n", "<C-c>", ":%y+<CR>", opts)
 
+-- Open Markdown Preview
+map("n", "mp", ":Vellum<CR>", opts)
